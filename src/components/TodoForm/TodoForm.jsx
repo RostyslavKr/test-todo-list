@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTodo } from "../../utils/context/useTodo";
 import { FormTodo, Input, Select, Button } from "./TodoForm.styled";
+
 const priorityList = [
   "1",
   "2",
@@ -21,12 +22,16 @@ const priorityList = [
 export const TodoForm = () => {
   const { addTodo } = useTodo();
   const [title, setTitle] = useState("");
-  const [priority, setPriority] = useState("");
+  const [priority, setPriority] = useState("1");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodo(title, priority);
-    setTitle("");
+    if (title === "") {
+      return alert("Please enter a title and priority");
+    } else {
+      addTodo(title, priority);
+      setTitle("");
+    }
   };
 
   return (
@@ -37,7 +42,7 @@ export const TodoForm = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <Select onChange={(e) => setPriority(e.target.value)}>
+      <Select value={priority} onChange={(e) => setPriority(e.target.value)}>
         {priorityList.map((p) => (
           <option value={p} key={p}>
             {p}

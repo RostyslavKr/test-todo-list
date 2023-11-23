@@ -7,14 +7,15 @@ export const FormTodo = styled.form`
 `;
 
 export const Input = styled.input`
-  width: 182px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: none;
-  border-radius: 3px;
-  padding-left: 10px;
   font-size: 18px;
   font-weight: 300;
+  padding-left: 10px;
+  width: 182px;
+  background-color: rgba(255, 255, 255, 0.6);
   color: #545454;
+  border: none;
+  border-radius: 3px;
+
   &:focus {
     border: 2px solid #ffd700;
     outline: none;
@@ -22,20 +23,20 @@ export const Input = styled.input`
 `;
 
 export const Select = styled.select`
-  background-color: rgba(255, 255, 255, 0.6);
-  border: none;
-  border-radius: 3px;
   font-size: 18px;
   font-weight: 300;
-  color: #545454;
   width: 64px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #545454;
+  border: none;
+  border-radius: 3px;
 `;
 
 export const Button = styled.button`
   font-size: 20px;
-  color: #ffd700;
   padding: 6px 30px;
   background-color: transparent;
+  color: #ffd700;
   border: 2px solid #ffd700;
   border-radius: 5px;
   &:hover {
