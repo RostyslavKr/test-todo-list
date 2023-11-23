@@ -4,7 +4,7 @@ export const WrapperLayoutTodos = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("/assets/background-todos.png");
+  background-image: url("./assets/background-todos.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
