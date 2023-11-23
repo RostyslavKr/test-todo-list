@@ -1,4 +1,4 @@
-import { TodoProvider } from "./utils/context/todoProvider";
+import { TodoProvider } from "./utils/context/TodoProvider";
 import { LayoutTodos } from "./components/LayoutTodos";
 import { Container } from "./Container.styled";
 import image from "./assets/img.png";
